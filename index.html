@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ByteWave</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: white;
+    }
+    nav a:hover {
+      color: #cce4ff;
+    }
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px 50px 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    h2 {
+      color: #004aad;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #004aad;
+      padding-bottom: 5px;
+    }
+    ul.services-list, ul.portfolio-list, ul.testimonials-list, ul.faq-list {
+      list-style: none;
+      padding: 0;
+    }
+    ul.services-list li,
+    ul.portfolio-list li,
+    ul.testimonials-list li,
+    ul.faq-list li {
+      background: #e8f0fe;
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      border-radius: 8px;
+    }
+    ul.portfolio-list li img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .testimonial-author {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    form label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: 600;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    form button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      background-color: #004aad;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #003375;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #004aad;
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav a {
+        margin: 0 8px;
+        font-size: 1rem;
+      }
+      main {
+        margin: 15px;
+        padding: 15px;
+      }
+    }
+
+    /* FAQ specific styles */
+    .faq-answer {
+      display: none;
+      margin-top: 8px;
+      padding-left: 15px;
+      color: #555;
+    }
+
+    .faq-question {
+      background: none;
+      border: none;
+      color: #004aad;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+      padding: 10px 0;
+    }
+
+    .faq-question:hover {
+      color: #002766;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ByteWave</h1>
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At ByteWave, we combine innovation and expertise to deliver cutting-edge software and web solutions tailored to your business needs. With years of experience and a passion for technology, we help businesses thrive in the digital era.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul class="services-list">
+      <li>Custom Website Development</li>
+      <li>Mobile App Development</li>
+      <li>AI-Powered Automation Tools</li>
+      <li>Consulting and Support</li>
+      <li>SEO and Digital Marketing</li>
+    </ul>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <ul class="portfolio-list">
+      <li>
+        <img src="https://via.placeholder.com/900x400?text=Project+1" alt="Project 1"/>
+        <strong>Project One:</strong> E-commerce website with seamless user experience.
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/900x400?text=Project+2" alt="Project 2"/>
+        <strong>Project Two:</strong> Mobile app for appointment booking and reminders.
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/900x400?text=Project+3" alt="Project 3"/>
+        <strong>Project Three:</strong> AI chatbot for customer support integration.
+      </li>
+    </ul>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <ul class="testimonials-list">
+      <li>
+        "ByteWave transformed our website and boosted our sales by 30%. Highly recommend!" 
+        <div class="testimonial-author">- Jane D., Retail Owner</div>
+      </li>
+      <li>
+        "Professional, quick, and great communication throughout the project." 
+        <div class="testimonial-author">- Mark S., App Startup Founder</div>
+      </li>
+      <li>
+        "Their AI-powered tools saved us countless hours. A game-changer for our business." 
+        <div class="testimonial-author">- Lisa K., Marketing Manager</div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <ul class="faq-list">
+      <li>
+        <button class="faq-question">What services do you offer?</button>
+        <div class="faq-answer"><p>We offer custom website development, mobile app development, AI-powered automation tools, consulting and support, and SEO and digital marketing services.</p></div>
+      </li>
+      <li>
+        <button class="faq-question">How do I get started?</button>
+        <div class="faq-answer"><p>Simply reach out to us through our contact form or email, and we'll schedule a consultation to discuss your project needs.</p></div>
+      </li>
+      <li>
+        <button class="faq-question">What is your pricing structure?</button>
+        <div class="faq-answer"><p>Pricing varies based on project complexity and scope. We provide custom quotes after an initial consultation. Please contact us for details.</p></div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will get back to you soon.'); this.reset();">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 ByteWave. All rights reserved.
+</footer>
+
+<script>
+  // Wait for DOM to load
+  document.addEventListener('DOMContentLoaded', () => {
+    // Get all FAQ question buttons
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(button => {
+      button.addEventListener('click', () => {
+        // Find the next sibling (the answer paragraph)
+        const answer = button.nextElementSibling;
+
+        // Toggle display
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+        } else {
+          answer.style.display = 'block';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html 
